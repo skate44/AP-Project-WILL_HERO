@@ -23,13 +23,13 @@ public class Main extends Application {
 
         //Stage stage = new Stage();
         Group root = new Group();
-        Scene scene = new Scene(root, Color.BLACK);
+        Scene scene = new Scene(root, Color.YELLOWGREEN);
 
         //Image icon = new Image("icon.png");
         //stage.getIcons().add(icon);
-        stage.setTitle("Stage Demo Program w00t w00t");
-        stage.setWidth(420);
-        stage.setHeight(420);
+        stage.setTitle("WILL HERO ");
+        stage.setWidth(1080);
+        stage.setHeight(720);
         stage.setResizable(false);
         stage.setX(50);
         stage.setY(50);
