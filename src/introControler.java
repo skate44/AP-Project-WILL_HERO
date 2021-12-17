@@ -13,6 +13,6 @@ public class introControler implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadingbar.setStyle("-fx-accent: Green;");
+        loadingbar.setStyle("-fx-accent: Orange;");
     }
 }
