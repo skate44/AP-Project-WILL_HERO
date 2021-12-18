@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class introControler implements Initializable {
+public class ControllerIntro implements Initializable {
 
     @FXML
     private AnchorPane ancherPane;
@@ -39,7 +39,7 @@ public class introControler implements Initializable {
                     public void run() {
                         Parent root = null;
                         try {
-                            root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
+                            root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

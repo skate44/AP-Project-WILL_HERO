@@ -6,7 +6,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 
-<AnchorPane prefHeight="524.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+<AnchorPane prefHeight="524.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMainMenu">
    <children>
       <Button layoutX="286.0" layoutY="164.0" mnemonicParsing="false" text="Create New Game" />
       <Button layoutX="324.0" layoutY="419.0" mnemonicParsing="false" text="Exit" />
