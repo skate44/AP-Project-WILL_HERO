@@ -5,11 +5,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="introControler">
+<AnchorPane fx:id="ancherPane" prefHeight="750.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="introControler">
    <children>
       <ImageView fitHeight="760.0" fitWidth="1426.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@pictures/FirstIntro.PNG" />
+            <Image url="@Image/FirstIntro.PNG" />
          </image>
       </ImageView>
       <ProgressBar fx:id="loadingbar" layoutX="573.0" layoutY="655.0" prefWidth="200.0" />

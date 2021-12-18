@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -12,6 +13,8 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("Intro.fxml"));
         primarystage.setTitle("WILL HERO");
+        Image icon = new Image("Image/icon.png");
+        primarystage.getIcons().add(icon);
         primarystage.setResizable(false);
         primarystage.setX(100);
         primarystage.setY(0);
@@ -19,14 +22,6 @@ public class Main extends Application {
         primarystage.setScene(scene);
         primarystage.show();
 
-
-        //stage.setScene(new Scene(root));
-        //stage.show();
-
-        //Group root = new Group();
-
-        //  Image icon = new Image("icon.png");
-        //  stage.getIcons().add(icon);
         /*
         stage.setTitle("WILL HERO ");
         stage.setWidth(1480);
@@ -38,7 +33,6 @@ public class Main extends Application {
         stage.setFullScreenExitHint("YOU CAN'T ESCAPE unless you press q");
         stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("Esc"));
          */
-
 
 
     }
