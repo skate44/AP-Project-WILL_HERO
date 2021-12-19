@@ -38,6 +38,12 @@ public class ControllerMainMenu implements Initializable {
     }
 
     @FXML
+    void ViewScoreBoard(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("ViewScore.fxml"));
+        MenuScenePane.getChildren().setAll(pane);
+    }
+
+    @FXML
     public void exit(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("EXIT");

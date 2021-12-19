@@ -35,7 +35,7 @@
                   </VBox>
                   <VBox prefHeight="24.0" prefWidth="249.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: a4e300;" text="High Score" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#ViewScoreBoard" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: a4e300;" text="High Score" textFill="WHITE">
                            <font>
                               <Font name="HP Simplified Hans Light" size="14.0" />
                            </font>
