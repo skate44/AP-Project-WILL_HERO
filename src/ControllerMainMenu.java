@@ -11,7 +11,6 @@ public class ControllerMainMenu implements Initializable {
     @FXML
     private ImageView imageView;
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Image image = new Image(getClass().getResourceAsStream("/Image/ForMenu.png"));

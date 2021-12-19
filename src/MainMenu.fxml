@@ -7,10 +7,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1426.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMainMenu">
+<AnchorPane prefHeight="760.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMainMenu">
    <children>
       <ImageView fx:id="imageView" fitHeight="760.0" fitWidth="1426.0" pickOnBounds="true" preserveRatio="true" />
-      <HBox layoutX="246.0" layoutY="652.0" prefHeight="0.0" prefWidth="828.0">
+      <HBox layoutX="299.0" layoutY="654.0" prefHeight="0.0" prefWidth="828.0">
          <children>
             <VBox prefHeight="54.0" prefWidth="196.0">
                <children>
