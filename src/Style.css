@@ -1,0 +1,9 @@
+.EnterPlayerName{
+    -fx-background-colour:#FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-colour: rgba(0,0,0,0);
+    -fx-background-colour:#FFFFFF;
+}
