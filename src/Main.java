@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    // BackGround Colour - #a2f0ff
+
     @Override
     public void start(Stage primarystage) throws Exception {
 

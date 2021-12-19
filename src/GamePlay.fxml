@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="760.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GamePlay">
-   <children>
-      <Text layoutX="396.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Let's Play" wrappingWidth="322.13671875">
-         <font>
-            <Font name="Cambria" size="24.0" />
-         </font>
-      </Text>
-   </children>
-</AnchorPane>
+<AnchorPane prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a2f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GamePlay" />
