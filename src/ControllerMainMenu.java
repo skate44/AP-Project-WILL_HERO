@@ -32,6 +32,12 @@ public class ControllerMainMenu implements Initializable {
     Stage stage;
 
     @FXML
+    void LetsPlay(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
+        MenuScenePane.getChildren().setAll(pane);
+    }
+
+    @FXML
     public void exit(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("EXIT");

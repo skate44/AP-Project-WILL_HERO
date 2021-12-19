@@ -17,7 +17,7 @@
                <children>
                   <VBox prefHeight="28.0" prefWidth="278.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="138.0" style="-fx-background-color: a4e300;" text="Play" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#LetsPlay" prefHeight="28.0" prefWidth="138.0" style="-fx-background-color: a4e300;" text="Play" textFill="WHITE">
                            <font>
                               <Font name="HP Simplified Hans Light" size="14.0" />
                            </font>
