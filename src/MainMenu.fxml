@@ -10,30 +10,39 @@
 <AnchorPane prefHeight="760.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMainMenu">
    <children>
       <ImageView fx:id="imageView" fitHeight="760.0" fitWidth="1426.0" pickOnBounds="true" preserveRatio="true" />
-      <HBox layoutX="299.0" layoutY="654.0" prefHeight="0.0" prefWidth="828.0">
+      <HBox layoutX="254.0" layoutY="671.0" prefHeight="0.0" prefWidth="828.0">
          <children>
-            <VBox prefHeight="54.0" prefWidth="196.0">
+            <VBox prefHeight="28.0" prefWidth="278.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Create New Game">
+                  <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="138.0" style="-fx-background-color: a4e300;" text="Create New Game" textFill="WHITE">
                      <font>
-                        <Font name="HP Simplified Hans Light" size="13.0" />
+                        <Font name="HP Simplified Hans Light" size="14.0" />
                      </font>
                   </Button>
                </children>
             </VBox>
-            <VBox prefHeight="54.0" prefWidth="205.0">
+            <VBox prefHeight="28.0" prefWidth="252.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Load a Game" />
+                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="118.0" style="-fx-background-color: a4e300;" text="Load a Game" textFill="WHITE">
+                     <font>
+                        <Font name="HP Simplified Hans Light" size="14.0" />
+                     </font></Button>
                </children>
             </VBox>
-            <VBox prefHeight="54.0" prefWidth="221.0">
+            <VBox prefHeight="24.0" prefWidth="249.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="High Score" />
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: a4e300;" text="High Score" textFill="WHITE">
+                     <font>
+                        <Font name="HP Simplified Hans Light" size="14.0" />
+                     </font></Button>
                </children>
             </VBox>
-            <VBox prefHeight="100.0" prefWidth="186.0">
+            <VBox prefHeight="28.0" prefWidth="142.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Exit" />
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: a4e300;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font name="HP Simplified Hans Light" size="14.0" />
+                     </font></Button>
                </children>
             </VBox>
          </children>
