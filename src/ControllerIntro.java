@@ -4,6 +4,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +22,6 @@ public class ControllerIntro implements Initializable {
 
     @FXML
     private ProgressBar loadingbar;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -54,6 +55,11 @@ public class ControllerIntro implements Initializable {
                         stage.setScene(scene);
                         stage.show();
 
+                        stage.setOnCloseRequest(event -> {
+                            event.consume();
+                            exit(stage);
+                        });
+
                         ancherPane.getScene().getWindow().hide();
                     }
                 });
@@ -63,4 +69,16 @@ public class ControllerIntro implements Initializable {
             }
         }
     }
+
+    public void exit(Stage stage) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("EXIT");
+        alert.setHeaderText("Do you want to Exit!");
+
+        if(alert.showAndWait().get() == ButtonType.OK) {
+            System.out.println("You successfully logged out!!");
+            stage.close();
+        }
+    }
+
 }
