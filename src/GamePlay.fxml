@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="PlayAnchorPane" prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a6f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGamePlay">
    <children>
-      <Button layoutX="577.0" layoutY="231.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #a4e300;" styleClass="EnterPlayerName" stylesheets="@Style.css" text="Button" textFill="WHITE">
+      <Button layoutX="34.0" layoutY="27.0" mnemonicParsing="false" onAction="#PauseGame" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #a4e300;" styleClass="EnterPlayerName" stylesheets="@Style.css" text="Pause" textFill="WHITE">
          <font>
-            <Font name="Cambria" size="14.0" />
+            <Font name="Cambria" size="18.0" />
          </font>
       </Button>
-      <ImageView fx:id="imageView" fitHeight="76.0" fitWidth="76.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#PauseGame" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

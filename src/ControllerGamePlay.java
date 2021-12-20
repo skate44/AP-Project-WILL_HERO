@@ -24,18 +24,16 @@ public class ControllerGamePlay implements Initializable {
     private AnchorPane PlayAnchorPane;
 
     @FXML
-    private ImageView imageView;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image image = new Image(getClass().getResourceAsStream("/Image/set.PNG"));
-        imageView.setImage(image);
-    }
-
-    @FXML
-    void PauseGame(MouseEvent event) throws IOException {
+    void PauseGame(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("PausePlayMenu.fxml"));
         PlayAnchorPane.getChildren().setAll(pane);
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
+
 
 }
