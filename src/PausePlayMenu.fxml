@@ -52,7 +52,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="89.0" prefWidth="202.0">
                      <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: #a4e300;" text="Quit" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#GoingToMainMenu" style="-fx-background-color: #a4e300;" text="Quit" textFill="WHITE">
                            <font>
                               <Font name="HP Simplified Hans Light" size="17.0" />
                            </font>

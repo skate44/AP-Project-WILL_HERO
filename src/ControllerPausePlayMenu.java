@@ -20,8 +20,22 @@ import java.util.ResourceBundle;
 
 public class ControllerPausePlayMenu implements Initializable {
 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
     @FXML
     private ImageView backgroundImage;
+
+    @FXML
+    void GoingToMainMenu(ActionEvent event) throws IOException {
+        // Quit Button
+        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
