@@ -17,7 +17,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 public class ControllerGamePlay implements Initializable {
+
+    @FXML
+    private AnchorPane PlayAnchorPane;
 
     @FXML
     private ImageView imageView;
@@ -26,6 +30,12 @@ public class ControllerGamePlay implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Image image = new Image(getClass().getResourceAsStream("/Image/set.PNG"));
         imageView.setImage(image);
+    }
+
+    @FXML
+    void PauseGame(MouseEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("PausePlayMenu.fxml"));
+        PlayAnchorPane.getChildren().setAll(pane);
     }
 
 }
