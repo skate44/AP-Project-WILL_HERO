@@ -61,7 +61,5 @@ public class ControllerMainMenu implements Initializable {
         Image image = new Image(getClass().getResourceAsStream("/Image/ForMenu.png"));
         imageView.setImage(image);
 
-
-
     }
 }
