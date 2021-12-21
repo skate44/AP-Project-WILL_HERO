@@ -27,22 +27,9 @@ public class ControllerGamePlay implements Initializable {
     private ImageView topIsland;
 
     @FXML
-    private ImageView island1;
-
-    @FXML
-    private ImageView island2;
-
-    @FXML
     void PauseGame(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("PausePlayMenu.fxml"));
         PlayAnchorPane.getChildren().setAll(pane);
-    }
-
-    void setIslandImage(){
-        Image image1 = new Image(getClass().getResourceAsStream("/Image/Island1.png"));
-        island1 = new ImageView(image1);
-        Image image2 = new Image(getClass().getResourceAsStream("/Image/Island2.png"));
-        island2 =  new ImageView(image2);
     }
 
 
@@ -51,7 +38,6 @@ public class ControllerGamePlay implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Image image = new Image(getClass().getResourceAsStream("/Image/IslandSmall.PNG"));
         topIsland.setImage(image);
-        setIslandImage();
 
     }
 

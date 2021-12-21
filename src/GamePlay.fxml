@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="PlayAnchorPane" prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a6f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGamePlay">
@@ -14,15 +13,5 @@
          </font>
       </Button>
       <ImageView fx:id="topIsland" fitHeight="189.0" fitWidth="196.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
-      <HBox alignment="CENTER" layoutX="257.0" layoutY="409.0" prefHeight="252.0" prefWidth="417.0">
-         <children>
-            <ImageView fx:id="island2" fitHeight="209.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </HBox>
-      <HBox layoutX="800.0" layoutY="419.0" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <ImageView fx:id="island1" fitHeight="213.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </HBox>
    </children>
 </AnchorPane>
