@@ -2,17 +2,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,9 +34,9 @@ public class ControllerGamePlay implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image image = new Image(getClass().getResourceAsStream("/Image/Islands11.png"));
-        Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands1.png"));
-        Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands5.png"));
+        Image image = new Image(getClass().getResourceAsStream("/Image/Islands/Islands11.png"));
+        Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands1.png"));
+        Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands5.png"));
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
         ImageIsland2.setImage(image2);
