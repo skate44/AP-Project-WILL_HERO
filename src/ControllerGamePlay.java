@@ -45,9 +45,9 @@ public class ControllerGamePlay implements Initializable {
         Image image = new Image(getClass().getResourceAsStream("/Image/IslandSmall.PNG"));
         topIsland.setImage(image);
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Island1.png"));
-        topIsland.setImage(image1);
+        island1.setImage(image1);
         Image image2 = new Image(getClass().getResourceAsStream("/Image/Island2.png"));
-        topIsland.setImage(image2);
+        island2.setImage(image2);
 
     }
 
