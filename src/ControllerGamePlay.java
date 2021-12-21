@@ -40,9 +40,9 @@ public class ControllerGamePlay implements Initializable {
 
     void setIslandImage(){
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Island1.png"));
-        island1.setImage(image1);
+        island1 = new ImageView(image1);
         Image image2 = new Image(getClass().getResourceAsStream("/Image/Island2.png"));
-        island2.setImage(image2);
+        island2 =  new ImageView(image2);
     }
 
 
@@ -51,7 +51,7 @@ public class ControllerGamePlay implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Image image = new Image(getClass().getResourceAsStream("/Image/IslandSmall.PNG"));
         topIsland.setImage(image);
-        //setIslandImage();
+        setIslandImage();
 
     }
 
