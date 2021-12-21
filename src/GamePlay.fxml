@@ -7,12 +7,12 @@
 
 <AnchorPane fx:id="PlayAnchorPane" prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a6f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGamePlay">
    <children>
-      <Button layoutX="43.0" layoutY="27.0" mnemonicParsing="false" onAction="#PauseGame" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #a4e300;" styleClass="EnterPlayerName" stylesheets="@Style.css" text="Pause" textFill="WHITE">
+      <Button layoutX="38.0" layoutY="44.0" mnemonicParsing="false" onAction="#PauseGame" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #a4e300;" styleClass="EnterPlayerName" stylesheets="@Style.css" text="Pause" textFill="WHITE">
          <font>
             <Font name="Cambria" size="18.0" />
          </font>
       </Button>
-      <ImageView fx:id="topIsland" fitHeight="189.0" fitWidth="196.0" layoutX="-69.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="ImageIsland1" fitHeight="215.0" fitWidth="332.0" layoutX="227.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="topIsland" fitHeight="165.0" fitWidth="144.0" layoutX="25.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ImageIsland1" fitHeight="215.0" fitWidth="332.0" layoutX="227.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
