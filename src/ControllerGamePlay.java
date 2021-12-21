@@ -48,6 +48,7 @@ public class ControllerGamePlay implements Initializable {
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
         ImageIsland2.setImage(image2);
+
     }
 
 
