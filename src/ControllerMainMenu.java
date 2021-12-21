@@ -24,9 +24,6 @@ public class ControllerMainMenu implements Initializable {
     private AnchorPane MenuScenePane;
 
     @FXML
-    private Button exitButton;
-
-    @FXML
     private ImageView imageView;
 
     Stage stage;

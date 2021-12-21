@@ -44,7 +44,7 @@
                   </VBox>
                   <VBox prefHeight="28.0" prefWidth="142.0">
                      <children>
-                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: a4e300;" text="Exit" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: a4e300;" text="Exit" textFill="WHITE">
                            <font>
                               <Font name="HP Simplified Hans Light" size="14.0" />
                            </font>
