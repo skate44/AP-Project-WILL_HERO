@@ -12,7 +12,7 @@
             <Font name="Cambria" size="18.0" />
          </font>
       </Button>
-      <ImageView fx:id="topIsland" fitHeight="165.0" fitWidth="144.0" layoutX="25.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="topIsland" fitHeight="165.0" fitWidth="144.0" layoutX="-16.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="ImageIsland1" fitHeight="215.0" fitWidth="332.0" layoutX="227.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

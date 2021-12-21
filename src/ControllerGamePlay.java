@@ -39,7 +39,7 @@ public class ControllerGamePlay implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image image = new Image(getClass().getResourceAsStream("/Image/IslandSmall.PNG"));
+        Image image = new Image(getClass().getResourceAsStream("/Image/Islands11.png"));
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands1.png"));
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
