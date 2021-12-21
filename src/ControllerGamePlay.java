@@ -38,16 +38,20 @@ public class ControllerGamePlay implements Initializable {
         PlayAnchorPane.getChildren().setAll(pane);
     }
 
+    void setIslandImage(){
+        Image image1 = new Image(getClass().getResourceAsStream("/Image/Island1.png"));
+        island1.setImage(image1);
+        Image image2 = new Image(getClass().getResourceAsStream("/Image/Island2.png"));
+        island2.setImage(image2);
+    }
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Image image = new Image(getClass().getResourceAsStream("/Image/IslandSmall.PNG"));
         topIsland.setImage(image);
-        Image image1 = new Image(getClass().getResourceAsStream("/Image/Island1.png"));
-        island1.setImage(image1);
-        Image image2 = new Image(getClass().getResourceAsStream("/Image/Island2.png"));
-        island2.setImage(image2);
+        //setIslandImage();
 
     }
 
