@@ -1,3 +1,4 @@
+import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
@@ -23,6 +24,7 @@ public class Hero {
         translate.setNode(img);
         translate.setDuration(Duration.millis(1000));
         translate.setCycleCount(TranslateTransition.INDEFINITE);
+        translate.setInterpolator(Interpolator.LINEAR);
         translate.setByY(-200);
         translate.setAutoReverse(true);
         translate.play();
