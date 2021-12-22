@@ -1,3 +1,4 @@
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -5,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,6 +19,9 @@ public class ControllerGamePlay implements Initializable {
 
     @FXML
     private ImageView topIsland;
+
+    @FXML
+    private ImageView helmet;
 
     @FXML
     private ImageView ImageIsland1;
@@ -34,12 +39,18 @@ public class ControllerGamePlay implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Hero h = new Hero();
+        h.jump(helmet);
         Image image = new Image(getClass().getResourceAsStream("/Image/Islands/Islands11.png"));
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands1.png"));
         Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands5.png"));
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
         ImageIsland2.setImage(image2);
+
+        // Translate Section
+
+
 
     }
 
