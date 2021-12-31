@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
@@ -35,12 +37,24 @@ public class ControllerGamePlay implements Initializable {
         PlayAnchorPane.getChildren().setAll(pane);
     }
 
+    @FXML
+    void moveit(KeyEvent event){
+        Hero h = new Hero();
+        if(event.getCode() == KeyCode.A){
+            System.out.println("A Pressed !!");
+            h.move(helmet);
+        }
+    }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Hero h = new Hero();
         h.jump(helmet);
+
+
+
+
         Image image = new Image(getClass().getResourceAsStream("/Image/Islands/Islands11.png"));
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands1.png"));
         Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands5.png"));

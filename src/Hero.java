@@ -14,23 +14,29 @@ import java.util.Collection;
 public class Hero {
 
     private int currentHelmet;
-    private int currentPosition;
-    private float jumpLength=20;
+    private int currentPosition=400;
+    private float jumpLength=-150;
     //private boolean aliveOrDead();
     public Group grp;
 
     public void jump(ImageView img){
         TranslateTransition translate = new TranslateTransition();
         translate.setNode(img);
-        translate.setDuration(Duration.millis(1000));
+        translate.setDuration(Duration.millis(700));
         translate.setCycleCount(TranslateTransition.INDEFINITE);
         translate.setInterpolator(Interpolator.LINEAR);
-        translate.setByY(-200);
+        translate.setByY(jumpLength);
         translate.setAutoReverse(true);
         translate.play();
     }
 
-    public void move(){}
+    public void move(ImageView img){
+        for(int i=1;i<5;i++){
+            System.out.println("Moving Helmet");
+            img.setX(currentPosition);
+            currentPosition+=10;
+        }
+    }
 
     public void die(){}
 

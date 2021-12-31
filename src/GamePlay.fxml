@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PlayAnchorPane" prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a6f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGamePlay">
+<AnchorPane fx:id="PlayAnchorPane" onKeyPressed="#moveit" prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a6f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGamePlay">
    <children>
       <Button layoutX="38.0" layoutY="44.0" mnemonicParsing="false" onAction="#PauseGame" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #00e300;" styleClass="EnterPlayerName" stylesheets="@Style.css" text="Pause" textFill="WHITE">
          <font>
