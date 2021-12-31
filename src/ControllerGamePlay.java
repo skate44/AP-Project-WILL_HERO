@@ -31,6 +31,8 @@ public class ControllerGamePlay implements Initializable {
     @FXML
     private ImageView ImageIsland2;
 
+    Hero h = new Hero(324);
+
     @FXML
     void PauseGame(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("PausePlayMenu.fxml"));
@@ -39,7 +41,6 @@ public class ControllerGamePlay implements Initializable {
 
     @FXML
     void moveit(KeyEvent event){
-        Hero h = new Hero();
         if(event.getCode() == KeyCode.A){
             System.out.println("A Pressed !!");
             h.move(helmet);
@@ -49,12 +50,7 @@ public class ControllerGamePlay implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Hero h = new Hero();
         h.jump(helmet);
-
-
-
-
         Image image = new Image(getClass().getResourceAsStream("/Image/Islands/Islands11.png"));
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands1.png"));
         Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands5.png"));

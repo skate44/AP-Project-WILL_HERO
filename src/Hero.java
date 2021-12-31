@@ -14,10 +14,14 @@ import java.util.Collection;
 public class Hero {
 
     private int currentHelmet;
-    private int currentPosition=400;
+    private int currentPosition;
     private float jumpLength=-150;
     //private boolean aliveOrDead();
     public Group grp;
+
+    Hero(int cp){
+        cp = currentPosition;
+    }
 
     public void jump(ImageView img){
         TranslateTransition translate = new TranslateTransition();
@@ -34,7 +38,7 @@ public class Hero {
         for(int i=1;i<5;i++){
             System.out.println("Moving Helmet");
             img.setX(currentPosition);
-            currentPosition+=10;
+            currentPosition+=20;
         }
     }
 
