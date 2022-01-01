@@ -27,10 +27,10 @@ public class ControllerGamePlay implements Initializable {
     private Text CurrentScore;
 
     @FXML
-    private ImageView topIsland;
+    private ImageView helmet;
 
     @FXML
-    private ImageView helmet;
+    private ImageView topIsland;
 
     @FXML
     private ImageView ImageIsland1;
@@ -51,17 +51,15 @@ public class ControllerGamePlay implements Initializable {
     @FXML
     void moveit(KeyEvent event){
         if(event.getCode() == KeyCode.A){
-            System.out.println("A Pressed !!");
-            h.move(helmet);
             // Timeline Section where Currentscore
             Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),e ->{
                 initialScore++;
                 CurrentScore.setText(String.valueOf(initialScore));
             } ));
-
-            timeline.setCycleCount(Animation.INDEFINITE);
             timeline.play();
             // Timeline Section Ends Here
+            System.out.println("A Pressed !!");
+            h.move(helmet);
         }
     }
 

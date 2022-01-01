@@ -35,11 +35,9 @@ public class Hero {
     }
 
     public void move(ImageView img){
-        for(int i=1;i<5;i++){
             System.out.println("Moving Helmet");
             img.setX(currentPosition);
-            currentPosition+=20;
-        }
+            currentPosition+=100;
     }
 
     public void die(){}
