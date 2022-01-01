@@ -4,6 +4,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="PlayAnchorPane" onKeyPressed="#moveit" prefHeight="760.0" prefWidth="1426.0" style="-fx-background-color: #a6f0ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerGamePlay">
@@ -20,5 +22,72 @@
          <image>
             <Image url="@Image/Helmet.png" />
          </image></ImageView>
+      <Pane layoutX="1306.0" layoutY="441.0" prefHeight="191.0" prefWidth="200.0">
+         <children>
+            <HBox layoutY="-2.0" prefHeight="198.0" prefWidth="4832.0">
+               <children>
+                  <ImageView fitHeight="215.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="192.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="211.0" fitWidth="354.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="192.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="134.0" fitWidth="312.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="193.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="297.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="194.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="192.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="190.0" fitWidth="278.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands6.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="192.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="186.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="196.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="205.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands8.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="196.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="180.0" fitWidth="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands9.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="195.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="197.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
