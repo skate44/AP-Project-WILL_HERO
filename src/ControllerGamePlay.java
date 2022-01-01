@@ -1,3 +1,6 @@
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -20,6 +24,9 @@ public class ControllerGamePlay implements Initializable {
     private AnchorPane PlayAnchorPane;
 
     @FXML
+    private Text CurrentScore;
+
+    @FXML
     private ImageView topIsland;
 
     @FXML
@@ -30,6 +37,8 @@ public class ControllerGamePlay implements Initializable {
 
     @FXML
     private ImageView ImageIsland2;
+
+    int initialScore =0;
 
     Hero h = new Hero(324);
 
@@ -57,6 +66,15 @@ public class ControllerGamePlay implements Initializable {
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
         ImageIsland2.setImage(image2);
+
+        // Timeline Section where Currentscore
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),e ->{
+            initialScore++;
+            CurrentScore.setText(String.valueOf(initialScore));
+        } ));
+
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
 
         // Translate Section
 
