@@ -41,6 +41,7 @@ public class ControllerGamePlay implements Initializable {
     int initialScore =0;
 
     Hero h = new Hero(324);
+    Islands i = new Islands(324);
 
     @FXML
     void PauseGame(ActionEvent event) throws IOException {
@@ -55,11 +56,14 @@ public class ControllerGamePlay implements Initializable {
             Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),e ->{
                 initialScore++;
                 CurrentScore.setText(String.valueOf(initialScore));
-            } ));
+            }));
             timeline.play();
             // Timeline Section Ends Here
             System.out.println("A Pressed !!");
             h.move(helmet);
+            i.move(topIsland);
+            i.move(ImageIsland1);
+            i.move(ImageIsland2);
         }
     }
 
