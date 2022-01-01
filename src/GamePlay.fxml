@@ -24,7 +24,7 @@
          </image></ImageView>
       <Pane layoutX="1306.0" layoutY="441.0" prefHeight="191.0" prefWidth="200.0">
          <children>
-            <HBox layoutY="-2.0" prefHeight="198.0" prefWidth="4832.0">
+            <HBox layoutY="-2.0" prefHeight="199.0" prefWidth="5229.0">
                <children>
                   <ImageView fitHeight="215.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -83,6 +83,18 @@
                   <ImageView fitHeight="197.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Image/Islands/Islands10.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="199.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="321.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="202.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="234.0" fitWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/Islands/Islands3.png" />
                      </image>
                   </ImageView>
                </children>
