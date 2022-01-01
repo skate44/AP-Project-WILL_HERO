@@ -53,6 +53,15 @@ public class ControllerGamePlay implements Initializable {
         if(event.getCode() == KeyCode.A){
             System.out.println("A Pressed !!");
             h.move(helmet);
+            // Timeline Section where Currentscore
+            Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),e ->{
+                initialScore++;
+                CurrentScore.setText(String.valueOf(initialScore));
+            } ));
+
+            timeline.setCycleCount(Animation.INDEFINITE);
+            timeline.play();
+            // Timeline Section Ends Here
         }
     }
 
@@ -66,15 +75,6 @@ public class ControllerGamePlay implements Initializable {
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
         ImageIsland2.setImage(image2);
-
-        // Timeline Section where Currentscore
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),e ->{
-            initialScore++;
-            CurrentScore.setText(String.valueOf(initialScore));
-        } ));
-
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
 
         // Translate Section
 

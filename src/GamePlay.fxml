@@ -105,7 +105,7 @@
       </Pane>
       <VBox alignment="CENTER" layoutX="620.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="79.0" prefWidth="168.0">
          <children>
-            <Text fx:id="CurrentScore" fill="#00e300" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="CurrentScore" fill="#00e300" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                <font>
                   <Font name="Times New Roman" size="48.0" />
                </font>
