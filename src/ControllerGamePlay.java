@@ -28,10 +28,25 @@ public class ControllerGamePlay implements Initializable {
     private Text CurrentScore;
 
     @FXML
-    private ImageView CoinLogo;
+    private Text CurrentCoinScore;
 
     @FXML
-    private Text CurrentCoinScore;
+    private ImageView gOrc1;
+
+    @FXML
+    private ImageView gOrc2;
+    
+    @FXML
+    private ImageView gOrc3;
+    
+    @FXML
+    private ImageView rOrc1;
+
+    @FXML
+    private ImageView rOrc2;
+
+    @FXML
+    private ImageView rOrc3;
 
     @FXML
     private ImageView Tree1;
@@ -109,6 +124,48 @@ public class ControllerGamePlay implements Initializable {
     private ImageView Island14;
 
     @FXML
+    private ImageView Island15;
+
+    @FXML
+    private ImageView Island16;
+
+    @FXML
+    private ImageView Island17;
+
+    @FXML
+    private ImageView Island18;
+
+    @FXML
+    private ImageView coin1;
+
+    @FXML
+    private ImageView coin2;
+
+    @FXML
+    private ImageView coin3;
+
+    @FXML
+    private ImageView coin4;
+
+    @FXML
+    private ImageView coin5;
+
+    @FXML
+    private ImageView coin6;
+
+    @FXML
+    private ImageView coin7;
+
+    @FXML
+    private ImageView coin8;
+
+    @FXML
+    private ImageView coin9;
+
+    @FXML
+    private ImageView coin10;
+    
+    @FXML
     private AnchorPane PlayAnchorPane;
 
     @FXML
@@ -148,12 +205,22 @@ public class ControllerGamePlay implements Initializable {
             h.move(helmet);
         }
     }
-    public void death(ImageView helmet, ImageView firstOrc){
-        if (helmet.getBoundsInParent().intersects(firstOrc.getBoundsInParent())) {
+
+    public void OrcCollision(ImageView helmet, ImageView img){
+        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             System.out.println("boom");}
-        /*if (Hero.getBoundsInParent().intersects(bossorcpane.getBoundsInParent())) {
+        /*if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             System.out.println("boom bosorc");}
         if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
+            System.out.println("bomb1");}
+
+         */
+    }
+
+    public void CoinCollision(ImageView helmet, ImageView img){
+        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
+            System.out.println("Coin Collision");}
+        /*if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
             System.out.println("bomb1");}
 
          */
@@ -164,30 +231,37 @@ public class ControllerGamePlay implements Initializable {
         // Jumping
         h.jump(helmet);
         go.jump(firstOrc);
+        go.jump(gOrc1);
+        go.jump(gOrc2);
+        go.jump(gOrc3);
+        ro.jump(rOrc1);
+        ro.jump(rOrc2);
+        ro.jump(rOrc3);
+
 
         // Translate Section
 
         AnimationTimer collisionTimer = new AnimationTimer() { //https://youtu.be/TObnWGoukqc taken help from this
             @Override
             public void handle(long timestamp) {
-                death(helmet,  firstOrc);
+                OrcCollision(helmet, firstOrc);
+                OrcCollision(helmet, gOrc1);
+                OrcCollision(helmet, gOrc2);
+                OrcCollision(helmet, gOrc3);
+                OrcCollision(helmet, rOrc1);
+                OrcCollision(helmet, rOrc2);
+                OrcCollision(helmet, rOrc3);
+                CoinCollision(helmet, coin1);
+                CoinCollision(helmet, coin2);
+                CoinCollision(helmet, coin3);
             }
         };
         collisionTimer.start();
 
     }
 
-    public void Animation(){
 
-        /*
-        RotateTransition rotate = new RotateTransition();
-        rotate.setNode(CoinLogo);
-        rotate.setDuration(Duration.millis(1000));
-        rotate.setCycleCount(TranslateTransition.INDEFINITE);
-        rotate.setInterpolator(Interpolator.LINEAR);
-        rotate.setByAngle(360);
-        rotate.play();
-         */
+    public void Animation(){
 
         TranslateTransition tree1 = new TranslateTransition();
         tree1.setNode(Tree1);
@@ -317,6 +391,134 @@ public class ControllerGamePlay implements Initializable {
         orc.setCycleCount(1);
         orc.play();
 
+        TranslateTransition orc1 = new TranslateTransition();
+        orc1.setNode(gOrc1);
+        orc1.setAutoReverse(false);
+        orc1.setDuration(Duration.millis(500));
+        orc1.setByX(-100);
+        orc1.setCycleCount(1);
+        orc1.play();
+
+        TranslateTransition orc2 = new TranslateTransition();
+        orc2.setNode(gOrc2);
+        orc2.setAutoReverse(false);
+        orc2.setDuration(Duration.millis(500));
+        orc2.setByX(-100);
+        orc2.setCycleCount(1);
+        orc2.play();
+        
+        TranslateTransition orc3 = new TranslateTransition();
+        orc3.setNode(rOrc1);
+        orc3.setAutoReverse(false);
+        orc3.setDuration(Duration.millis(500));
+        orc3.setByX(-100);
+        orc3.setCycleCount(1);
+        orc3.play();
+
+        TranslateTransition orc4 = new TranslateTransition();
+        orc4.setNode(rOrc2);
+        orc4.setAutoReverse(false);
+        orc4.setDuration(Duration.millis(500));
+        orc4.setByX(-100);
+        orc4.setCycleCount(1);
+        orc4.play();
+
+        TranslateTransition orc5 = new TranslateTransition();
+        orc5.setNode(rOrc3);
+        orc5.setAutoReverse(false);
+        orc5.setDuration(Duration.millis(500));
+        orc5.setByX(-100);
+        orc5.setCycleCount(1);
+        orc5.play();
+
+        TranslateTransition orc6 = new TranslateTransition();
+        orc6.setNode(gOrc3);
+        orc6.setAutoReverse(false);
+        orc6.setDuration(Duration.millis(500));
+        orc6.setByX(-100);
+        orc6.setCycleCount(1);
+        orc6.play();
+
+        TranslateTransition Coin1 = new TranslateTransition();
+        Coin1.setNode(coin1);
+        Coin1.setAutoReverse(false);
+        Coin1.setDuration(Duration.millis(500));
+        Coin1.setByX(-100);
+        Coin1.setCycleCount(1);
+        Coin1.play();
+
+        TranslateTransition Coin2 = new TranslateTransition();
+        Coin2.setNode(coin2);
+        Coin2.setAutoReverse(false);
+        Coin2.setDuration(Duration.millis(500));
+        Coin2.setByX(-100);
+        Coin2.setCycleCount(1);
+        Coin2.play();
+
+        TranslateTransition Coin3 = new TranslateTransition();
+        Coin3.setNode(coin3);
+        Coin3.setAutoReverse(false);
+        Coin3.setDuration(Duration.millis(500));
+        Coin3.setByX(-100);
+        Coin3.setCycleCount(1);
+        Coin3.play();
+
+        TranslateTransition Coin4 = new TranslateTransition();
+        Coin4.setNode(coin4);
+        Coin4.setAutoReverse(false);
+        Coin4.setDuration(Duration.millis(500));
+        Coin4.setByX(-100);
+        Coin4.setCycleCount(1);
+        Coin4.play();
+
+        TranslateTransition Coin5 = new TranslateTransition();
+        Coin5.setNode(coin5);
+        Coin5.setAutoReverse(false);
+        Coin5.setDuration(Duration.millis(500));
+        Coin5.setByX(-100);
+        Coin5.setCycleCount(1);
+        Coin5.play();
+
+        TranslateTransition Coin6 = new TranslateTransition();
+        Coin6.setNode(coin6);
+        Coin6.setAutoReverse(false);
+        Coin6.setDuration(Duration.millis(500));
+        Coin6.setByX(-100);
+        Coin6.setCycleCount(1);
+        Coin6.play();
+
+        TranslateTransition Coin7 = new TranslateTransition();
+        Coin7.setNode(coin7);
+        Coin7.setAutoReverse(false);
+        Coin7.setDuration(Duration.millis(500));
+        Coin7.setByX(-100);
+        Coin7.setCycleCount(1);
+        Coin7.play();
+
+        TranslateTransition Coin8 = new TranslateTransition();
+        Coin8.setNode(coin8);
+        Coin8.setAutoReverse(false);
+        Coin8.setDuration(Duration.millis(500));
+        Coin8.setByX(-100);
+        Coin8.setCycleCount(1);
+        Coin8.play();
+
+        TranslateTransition Coin9 = new TranslateTransition();
+        Coin9.setNode(coin9);
+        Coin9.setAutoReverse(false);
+        Coin9.setDuration(Duration.millis(500));
+        Coin9.setByX(-100);
+        Coin9.setCycleCount(1);
+        Coin9.play();
+
+        TranslateTransition Coin10 = new TranslateTransition();
+        Coin10.setNode(coin10);
+        Coin10.setAutoReverse(false);
+        Coin10.setDuration(Duration.millis(500));
+        Coin10.setByX(-100);
+        Coin10.setCycleCount(1);
+        Coin10.play();
+
         TranslateTransition island4 = new TranslateTransition();
         island4.setNode(Island4);
         island4.setAutoReverse(false);
@@ -388,6 +590,54 @@ public class ControllerGamePlay implements Initializable {
         island12.setByX(-100);
         island12.setCycleCount(1);
         island12.play();
+
+        TranslateTransition island13 = new TranslateTransition();
+        island13.setNode(Island13);
+        island13.setAutoReverse(false);
+        island13.setDuration(Duration.millis(500));
+        island13.setByX(-100);
+        island13.setCycleCount(1);
+        island13.play();
+
+        TranslateTransition island14 = new TranslateTransition();
+        island14.setNode(Island14);
+        island14.setAutoReverse(false);
+        island14.setDuration(Duration.millis(500));
+        island14.setByX(-100);
+        island14.setCycleCount(1);
+        island14.play();
+
+        TranslateTransition island15 = new TranslateTransition();
+        island15.setNode(Island15);
+        island15.setAutoReverse(false);
+        island15.setDuration(Duration.millis(500));
+        island15.setByX(-100);
+        island15.setCycleCount(1);
+        island15.play();
+
+        TranslateTransition island16 = new TranslateTransition();
+        island16.setNode(Island16);
+        island16.setAutoReverse(false);
+        island16.setDuration(Duration.millis(500));
+        island16.setByX(-100);
+        island16.setCycleCount(1);
+        island16.play();
+
+        TranslateTransition island17 = new TranslateTransition();
+        island17.setNode(Island17);
+        island17.setAutoReverse(false);
+        island17.setDuration(Duration.millis(500));
+        island17.setByX(-100);
+        island17.setCycleCount(1);
+        island17.play();
+
+        TranslateTransition island18 = new TranslateTransition();
+        island18.setNode(Island18);
+        island18.setAutoReverse(false);
+        island18.setDuration(Duration.millis(500));
+        island18.setByX(-100);
+        island18.setCycleCount(1);
+        island18.play();
 
     }
 
