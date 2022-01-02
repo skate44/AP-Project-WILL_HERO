@@ -219,26 +219,26 @@ public class ControllerGamePlay implements Initializable{
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             System.out.println("Chest Collision");
 
+            Image img1 = new Image(getClass().getResourceAsStream("OpenedChest.png"));
+            img.setImage(img1);
+
+
+
         }
 
     }
 
     public void CoinCollision(ImageView helmet, ImageView img){
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
-
             FadeTransition fadeout = new FadeTransition(Duration.millis(1),img);
             fadeout.setFromValue(1);
             fadeout.setToValue(0);
             fadeout.play();
-
             initialCoin++;
-            System.out.println(initialCoin);
             CurrentCoinScore.setText(String.valueOf(initialCoin));
-            System.out.println("Coin Collision");}
-        /*
-        if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
-            System.out.println("bomb1");}
-         */
+            System.out.println("Coin Collision");
+        }
+
     }
 
     @Override
@@ -270,7 +270,13 @@ public class ControllerGamePlay implements Initializable{
                 ChestCollision(helmet,ClosedChest);
 
                 CoinCollision(helmet, coin1);
-
+                CoinCollision(helmet, coin2);
+                CoinCollision(helmet, coin3);
+                CoinCollision(helmet, coin4);
+                CoinCollision(helmet, coin5);
+                CoinCollision(helmet, coin6);
+                CoinCollision(helmet, coin7);
+                CoinCollision(helmet, coin8);
 
                 /*
                 if(bool){
