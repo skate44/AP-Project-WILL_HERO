@@ -42,7 +42,7 @@
       </VBox>
       <ImageView fx:id="firstOrc" fitHeight="50.0" fitWidth="50.0" layoutX="666.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/green%20orc.png" />
+            <Image url="@Image/green orc.png" />
          </image>
       </ImageView>
       <ImageView fx:id="Island3" fitHeight="185.0" fitWidth="207.0" layoutX="943.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
@@ -105,24 +105,24 @@
             <Image url="@Image/Islands/Islands3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="127.0" fitWidth="84.0" layoutX="737.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Tree3" fitHeight="127.0" fitWidth="84.0" layoutX="737.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/Tree%20b.png" />
+            <Image url="@Image/Tree2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="57.0" layoutX="66.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Tree1" fitHeight="79.0" fitWidth="57.0" layoutX="66.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/Tree%20b.png" />
+            <Image url="@Image/Tree4.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="92.0" fitWidth="84.0" layoutX="959.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Tree4" fitHeight="92.0" fitWidth="84.0" layoutX="959.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/Tree%20c.png" />
+            <Image url="@Image/Tree3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="92.0" fitWidth="84.0" layoutX="261.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Tree2" fitHeight="92.0" fitWidth="84.0" layoutX="261.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/Tree%20c.png" />
+            <Image url="@Image/Tree3.png" />
          </image>
       </ImageView>
    </children>

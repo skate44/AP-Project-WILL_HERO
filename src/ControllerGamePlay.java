@@ -28,6 +28,18 @@ public class ControllerGamePlay implements Initializable {
     private Text CurrentScore;
 
     @FXML
+    private ImageView Tree1;
+
+    @FXML
+    private ImageView Tree2;
+
+    @FXML
+    private ImageView Tree3;
+
+    @FXML
+    private ImageView Tree4;
+
+    @FXML
     private ImageView Island1;
 
     @FXML
@@ -103,7 +115,7 @@ public class ControllerGamePlay implements Initializable {
             timeline.play();
             // Timeline Section Ends Here
             System.out.println("A Pressed !!");
-            IslandAnimation();
+            Animation();
             h.move(helmet);
         }
     }
@@ -135,7 +147,39 @@ public class ControllerGamePlay implements Initializable {
 
     }
 
-    public void IslandAnimation(){
+    public void Animation(){
+
+        TranslateTransition tree1 = new TranslateTransition();
+        tree1.setNode(Tree1);
+        tree1.setAutoReverse(false);
+        tree1.setDuration(Duration.millis(500));
+        tree1.setByX(-100);
+        tree1.setCycleCount(1);
+        tree1.play();
+
+        TranslateTransition tree2 = new TranslateTransition();
+        tree2.setNode(Tree2);
+        tree2.setAutoReverse(false);
+        tree2.setDuration(Duration.millis(500));
+        tree2.setByX(-100);
+        tree2.setCycleCount(1);
+        tree2.play();
+
+        TranslateTransition tree3 = new TranslateTransition();
+        tree3.setNode(Tree3);
+        tree3.setAutoReverse(false);
+        tree3.setDuration(Duration.millis(500));
+        tree3.setByX(-100);
+        tree3.setCycleCount(1);
+        tree3.play();
+
+        TranslateTransition tree4 = new TranslateTransition();
+        tree4.setNode(Tree4);
+        tree4.setAutoReverse(false);
+        tree4.setDuration(Duration.millis(500));
+        tree4.setByX(-100);
+        tree4.setCycleCount(1);
+        tree4.play();
 
         TranslateTransition island0 = new TranslateTransition();
         island0.setNode(topIsland);
