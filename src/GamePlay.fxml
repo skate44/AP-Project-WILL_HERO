@@ -118,7 +118,7 @@
       </HBox>
       <ImageView fx:id="firstOrc" fitHeight="79.0" fitWidth="71.0" layoutX="829.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/game%20static%20hui/green%20orc.png" />
+            <Image url="@Image/Orcs/Boss%20orch.png" />
          </image>
       </ImageView>
    </children>
