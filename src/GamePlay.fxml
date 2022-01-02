@@ -344,7 +344,7 @@
             <Image url="@Image/Coin.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ClosedChest" fitHeight="60.0" fitWidth="76.0" layoutX="1370.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ClosedChest" fitHeight="60.0" fitWidth="76.0" layoutX="1300.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Chest.png" />
          </image>
@@ -354,7 +354,7 @@
             <Image url="@Image/TNT.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="OpenChest" fitHeight="60.0" fitWidth="76.0" layoutX="1371.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="OpenChest" disable="true" fitHeight="60.0" fitWidth="76.0" layoutX="1300.0" layoutY="396.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/OpenedChest.png" />
          </image>

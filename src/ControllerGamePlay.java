@@ -220,23 +220,23 @@ public class ControllerGamePlay implements Initializable{
     }
 
     public void ChestCollision(ImageView helmet, ImageView img,ImageView img1){
+        Image imageObject;
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             System.out.println("Chest Collision");
 
-            FadeTransition fadeout = new FadeTransition(Duration.millis(1),img);
+            FadeTransition fadeout = new FadeTransition(Duration.millis(1), img);
             fadeout.setFromValue(1);
             fadeout.setToValue(0);
             fadeout.play();
 
-        }
-        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
-            FadeTransition fadein = new FadeTransition(Duration.millis(1),img1);
+            FadeTransition fadein = new FadeTransition(Duration.millis(1), img1);
             fadein.setFromValue(0);
             fadein.setToValue(1);
             fadein.play();
-        }
 
+        }
     }
+
 
     public void CoinCollision(ImageView helmet, ImageView img){
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
@@ -248,7 +248,6 @@ public class ControllerGamePlay implements Initializable{
             CurrentCoinScore.setText(String.valueOf(initialCoin));
             System.out.println("Coin Collision");
         }
-
     }
 
     @Override
@@ -278,6 +277,7 @@ public class ControllerGamePlay implements Initializable{
                 OrcCollision(helmet, rOrc2);
                 OrcCollision(helmet, rOrc3);
                 ChestCollision(helmet,ClosedChest,OpenChest);
+                //ChestCollisionAfter(helmet,OpenChest);
 
                 CoinCollision(helmet, coin1);
                 CoinCollision(helmet, coin2);
@@ -711,6 +711,14 @@ public class ControllerGamePlay implements Initializable{
         chest.setByX(-100);
         chest.setCycleCount(1);
         chest.play();
+
+        TranslateTransition chestOpen = new TranslateTransition();
+        chestOpen.setNode(OpenChest);
+        chestOpen.setAutoReverse(false);
+        chestOpen.setDuration(Duration.millis(500));
+        chestOpen.setByX(-100);
+        chestOpen.setCycleCount(1);
+        chestOpen.play();
 
     }
 
