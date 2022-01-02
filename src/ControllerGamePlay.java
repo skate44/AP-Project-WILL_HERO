@@ -70,12 +70,13 @@ public class ControllerGamePlay implements Initializable {
             timeline.play();
             // Timeline Section Ends Here
             System.out.println("A Pressed !!");
+            //IslandAnimation();
             h.move(helmet);
             // To move the Islands around
             i.move(topIsland);
-            i.move(ImageIsland1);
-            i.move(ImageIsland2);
-            i.move(HboxIsland);
+            //i.move(ImageIsland1);
+            //i.move(ImageIsland2);
+            //i.move(HboxIsland);
         }
     }
     public void death(ImageView helmet, ImageView firstOrc){
@@ -94,12 +95,7 @@ public class ControllerGamePlay implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         h.jump(helmet);
         h.jump(firstOrc);
-        Image image = new Image(getClass().getResourceAsStream("/Image/Islands/Islands11.png"));
-        Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands1.png"));
-        Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands5.png"));
-        topIsland.setImage(image);
-        ImageIsland1.setImage(image1);
-        ImageIsland2.setImage(image2);
+
         // Translate Section
 
         AnimationTimer collisionTimer = new AnimationTimer() { //https://youtu.be/TObnWGoukqc taken help from this
@@ -109,6 +105,26 @@ public class ControllerGamePlay implements Initializable {
             }
         };
         collisionTimer.start();
+
+    }
+
+    public void IslandAnimation(){
+
+        TranslateTransition island1 = new TranslateTransition();
+        island1.setNode(ImageIsland1);
+        island1.setAutoReverse(false);
+        island1.setDuration(Duration.millis(500));
+        island1.setByX(-200);
+        island1.setCycleCount(1);
+        island1.play();
+
+        TranslateTransition island2 = new TranslateTransition();
+        island2.setNode(ImageIsland2);
+        island2.setAutoReverse(false);
+        island2.setDuration(Duration.millis(500));
+        island2.setByX(-200);
+        island2.setCycleCount(1);
+        island2.play();
 
     }
 
