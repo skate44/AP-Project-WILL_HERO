@@ -1,7 +1,4 @@
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +19,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControllerGamePlay implements Initializable {
+
+
+public class ControllerGamePlay implements Initializable{
 
     @FXML
     private Text CurrentScore;
@@ -136,6 +135,9 @@ public class ControllerGamePlay implements Initializable {
     private ImageView Island18;
 
     @FXML
+    private ImageView ClosedChest;
+
+    @FXML
     private ImageView coin1;
 
     @FXML
@@ -177,7 +179,8 @@ public class ControllerGamePlay implements Initializable {
     @FXML
     private ImageView topIsland;
 
-    int initialScore =0;
+    int initialScore = 0;
+    int initialCoin = 0;
 
     Hero h = new Hero(324);
     Islands i = new Islands(324);
@@ -217,12 +220,29 @@ public class ControllerGamePlay implements Initializable {
          */
     }
 
+    public void ChestCollision(ImageView helmet, ImageView img){
+        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
+            System.out.println("Chest Collision");
+
+        }
+
+    }
+
     public void CoinCollision(ImageView helmet, ImageView img){
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
-            System.out.println("Coin Collision");}
-        /*if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
-            System.out.println("bomb1");}
 
+            FadeTransition fadeout = new FadeTransition(Duration.millis(1),img);
+            fadeout.setFromValue(1);
+            fadeout.setToValue(0);
+            fadeout.play();
+
+            initialCoin++;
+            System.out.println(initialCoin);
+            CurrentCoinScore.setText(String.valueOf(initialCoin));
+            System.out.println("Coin Collision");}
+        /*
+        if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
+            System.out.println("bomb1");}
          */
     }
 
@@ -241,7 +261,8 @@ public class ControllerGamePlay implements Initializable {
 
         // Translate Section
 
-        AnimationTimer collisionTimer = new AnimationTimer() { //https://youtu.be/TObnWGoukqc taken help from this
+        AnimationTimer collisionTimer = new AnimationTimer() {
+            boolean bool = false;
             @Override
             public void handle(long timestamp) {
                 OrcCollision(helmet, firstOrc);
@@ -251,9 +272,42 @@ public class ControllerGamePlay implements Initializable {
                 OrcCollision(helmet, rOrc1);
                 OrcCollision(helmet, rOrc2);
                 OrcCollision(helmet, rOrc3);
+                ChestCollision(helmet,ClosedChest);
+
                 CoinCollision(helmet, coin1);
-                CoinCollision(helmet, coin2);
-                CoinCollision(helmet, coin3);
+
+
+                /*
+                if(bool){
+                    //CoinCollision(helmet, coin3);
+                    bool = false;
+                }
+                    if(bool){
+                        CoinCollision(helmet, coin4);
+                        bool = false;
+                    }
+                    if(bool){
+                        CoinCollision(helmet, coin5);
+                        bool = false;
+                    }
+                    if(bool){
+                        CoinCollision(helmet, coin6);
+                        bool = false;
+                    }
+                    if(bool){
+                        CoinCollision(helmet, coin7);
+                        bool = false;
+                    }
+                    if(bool){
+                        CoinCollision(helmet, coin8);
+                        bool = false;
+                    }
+                    if(bool){
+                        CoinCollision(helmet, coin9);
+                        bool = false;
+                    }
+
+                 */
             }
         };
         collisionTimer.start();
@@ -638,6 +692,14 @@ public class ControllerGamePlay implements Initializable {
         island18.setByX(-100);
         island18.setCycleCount(1);
         island18.play();
+
+        TranslateTransition chest = new TranslateTransition();
+        chest.setNode(ClosedChest);
+        chest.setAutoReverse(false);
+        chest.setDuration(Duration.millis(500));
+        chest.setByX(-100);
+        chest.setCycleCount(1);
+        chest.play();
 
     }
 
