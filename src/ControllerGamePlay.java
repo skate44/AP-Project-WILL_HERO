@@ -196,13 +196,8 @@ public class ControllerGamePlay implements Initializable{
     @FXML
     void moveit(KeyEvent event){
         if(event.getCode() == KeyCode.A){
-            // Timeline Section where Currentscore
-            Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),e ->{
-                initialScore++;
-                CurrentScore.setText(String.valueOf(initialScore));
-            }));
-            timeline.play();
-            // Timeline Section Ends Here
+            initialScore++;
+            CurrentScore.setText(String.valueOf(initialScore));
             System.out.println("A Pressed !!");
             Animation();
             h.move(helmet);
