@@ -210,13 +210,8 @@ public class ControllerGamePlay implements Initializable{
 
     public void OrcCollision(ImageView helmet, ImageView img){
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
-            System.out.println("boom");}
-        /*if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
-            System.out.println("boom bosorc");}
-        if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
-            System.out.println("bomb1");}
-
-         */
+            System.out.println("Orc Collision");
+        }
     }
 
     public void ChestCollision(ImageView helmet, ImageView img,ImageView img1){

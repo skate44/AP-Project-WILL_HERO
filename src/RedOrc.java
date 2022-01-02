@@ -19,7 +19,7 @@ public class RedOrc {
     public void jump(ImageView img){
         TranslateTransition translate = new TranslateTransition();
         translate.setNode(img);
-        translate.setDuration(Duration.millis(600));
+        translate.setDuration(Duration.millis(400));
         translate.setCycleCount(TranslateTransition.INDEFINITE);
         translate.setInterpolator(Interpolator.LINEAR);
         translate.setByY(jumpLength);
