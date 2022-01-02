@@ -26,7 +26,7 @@ public class Hero {
     public void jump(ImageView img){
         TranslateTransition translate = new TranslateTransition();
         translate.setNode(img);
-        translate.setDuration(Duration.millis(700));
+        translate.setDuration(Duration.millis(600));
         translate.setCycleCount(TranslateTransition.INDEFINITE);
         translate.setInterpolator(Interpolator.LINEAR);
         translate.setByY(jumpLength);

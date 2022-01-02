@@ -40,6 +40,27 @@ public class ControllerGamePlay implements Initializable {
     private ImageView Tree4;
 
     @FXML
+    private ImageView Tree5;
+
+    @FXML
+    private ImageView Tree6;
+
+    @FXML
+    private ImageView Tree7;
+
+    @FXML
+    private ImageView Tree8;
+
+    @FXML
+    private ImageView Tree9;
+
+    @FXML
+    private ImageView Tree10;
+
+    @FXML
+    private ImageView Tree11;
+
+    @FXML
     private ImageView Island1;
 
     @FXML
@@ -180,6 +201,62 @@ public class ControllerGamePlay implements Initializable {
         tree4.setByX(-100);
         tree4.setCycleCount(1);
         tree4.play();
+
+        TranslateTransition tree5 = new TranslateTransition();
+        tree5.setNode(Tree5);
+        tree5.setAutoReverse(false);
+        tree5.setDuration(Duration.millis(500));
+        tree5.setByX(-100);
+        tree5.setCycleCount(1);
+        tree5.play();
+
+        TranslateTransition tree6 = new TranslateTransition();
+        tree6.setNode(Tree6);
+        tree6.setAutoReverse(false);
+        tree6.setDuration(Duration.millis(500));
+        tree6.setByX(-100);
+        tree6.setCycleCount(1);
+        tree6.play();
+
+        TranslateTransition tree7 = new TranslateTransition();
+        tree7.setNode(Tree7);
+        tree7.setAutoReverse(false);
+        tree7.setDuration(Duration.millis(500));
+        tree7.setByX(-100);
+        tree7.setCycleCount(1);
+        tree7.play();
+
+        TranslateTransition tree8 = new TranslateTransition();
+        tree8.setNode(Tree8);
+        tree8.setAutoReverse(false);
+        tree8.setDuration(Duration.millis(500));
+        tree8.setByX(-100);
+        tree8.setCycleCount(1);
+        tree8.play();
+
+        TranslateTransition tree9 = new TranslateTransition();
+        tree9.setNode(Tree9);
+        tree9.setAutoReverse(false);
+        tree9.setDuration(Duration.millis(500));
+        tree9.setByX(-100);
+        tree9.setCycleCount(1);
+        tree9.play();
+
+        TranslateTransition tree10 = new TranslateTransition();
+        tree10.setNode(Tree10);
+        tree10.setAutoReverse(false);
+        tree10.setDuration(Duration.millis(500));
+        tree10.setByX(-100);
+        tree10.setCycleCount(1);
+        tree10.play();
+
+        TranslateTransition tree11 = new TranslateTransition();
+        tree11.setNode(Tree11);
+        tree11.setAutoReverse(false);
+        tree11.setDuration(Duration.millis(500));
+        tree11.setByX(-100);
+        tree11.setCycleCount(1);
+        tree11.play();
 
         TranslateTransition island0 = new TranslateTransition();
         island0.setNode(topIsland);
