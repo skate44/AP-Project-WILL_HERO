@@ -15,6 +15,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+import javafx.animation.AnimationTimer;
+import javafx.animation.TranslateTransition;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,6 +29,9 @@ public class ControllerGamePlay implements Initializable {
 
     @FXML
     private Text CurrentScore;
+
+    @FXML
+    private ImageView firstOrc;
 
     @FXML
     private ImageView HboxIsland;
@@ -73,21 +78,42 @@ public class ControllerGamePlay implements Initializable {
             i.move(HboxIsland);
         }
     }
+    public void death(ImageView helmet, ImageView firstOrc){
+        if (helmet.getBoundsInParent().intersects(firstOrc.getBoundsInParent())) {
+            System.out.println("boom");}
+        /*if (Hero.getBoundsInParent().intersects(bossorcpane.getBoundsInParent())) {
+            System.out.println("boom bosorc");}
+        if (Hero.getBoundsInParent().intersects(tnt1.getBoundsInParent())) {
+            System.out.println("bomb1");}
+
+         */
+    }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         h.jump(helmet);
+        h.jump(firstOrc);
         Image image = new Image(getClass().getResourceAsStream("/Image/Islands/Islands11.png"));
         Image image1 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands1.png"));
         Image image2 = new Image(getClass().getResourceAsStream("/Image/Islands/Islands5.png"));
         topIsland.setImage(image);
         ImageIsland1.setImage(image1);
         ImageIsland2.setImage(image2);
-
         // Translate Section
 
+        AnimationTimer collisionTimer = new AnimationTimer() { //https://youtu.be/TObnWGoukqc taken help from this
+            @Override
+            public void handle(long timestamp) {
+                death(helmet,  firstOrc);
+            }
+        };
+        collisionTimer.start();
+
     }
+
+
+
 
 
 
