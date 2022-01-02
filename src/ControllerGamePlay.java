@@ -11,6 +11,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -25,6 +27,9 @@ public class ControllerGamePlay implements Initializable {
 
     @FXML
     private Text CurrentScore;
+
+    @FXML
+    private ImageView HboxIsland;
 
     @FXML
     private ImageView helmet;
@@ -61,9 +66,11 @@ public class ControllerGamePlay implements Initializable {
             // Timeline Section Ends Here
             System.out.println("A Pressed !!");
             h.move(helmet);
+            // To move the Islands around
             i.move(topIsland);
             i.move(ImageIsland1);
             i.move(ImageIsland2);
+            i.move(HboxIsland);
         }
     }
 
@@ -79,9 +86,6 @@ public class ControllerGamePlay implements Initializable {
         ImageIsland2.setImage(image2);
 
         // Translate Section
-
-
-
 
     }
 

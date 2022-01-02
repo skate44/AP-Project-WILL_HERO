@@ -1,4 +1,6 @@
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 public class Islands {
 
@@ -17,6 +19,12 @@ public class Islands {
     public void move(ImageView img){
         System.out.println("Moving Helmet");
         img.setX(currentPosition);
+        currentPosition-=10;
+    }
+
+    public void movep(HBox hBox){
+        System.out.println("Moving Helmet");
+        // hBox
         currentPosition-=10;
     }
 
