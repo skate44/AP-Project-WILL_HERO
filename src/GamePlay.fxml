@@ -19,15 +19,15 @@
          <image>
             <Image url="@Image/Islands/Islands11.png" />
          </image></ImageView>
-      <ImageView fx:id="ImageIsland1" fitHeight="141.0" fitWidth="267.0" layoutX="227.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island1" fitHeight="141.0" fitWidth="267.0" layoutX="557.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands1.png" />
          </image></ImageView>
-      <ImageView fx:id="ImageIsland2" fitHeight="178.0" fitWidth="200.0" layoutX="620.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island2" fitHeight="178.0" fitWidth="200.0" layoutX="250.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands5.png" />
          </image></ImageView>
-      <ImageView fx:id="helmet" fitHeight="50.0" fitWidth="50.0" layoutX="324.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="helmet" fitHeight="50.0" fitWidth="50.0" layoutX="319.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Helmet.png" />
          </image></ImageView>
@@ -40,69 +40,89 @@
             </Text>
          </children>
       </VBox>
-      <ImageView fx:id="firstOrc" fitHeight="50.0" fitWidth="50.0" layoutX="1046.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="firstOrc" fitHeight="50.0" fitWidth="50.0" layoutX="666.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/green%20orc.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="HboxIsland" fitHeight="185.0" fitWidth="207.0" layoutX="943.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island3" fitHeight="185.0" fitWidth="207.0" layoutX="943.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands5.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="127.0" fitWidth="288.0" layoutX="1276.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island4" fitHeight="127.0" fitWidth="288.0" layoutX="1276.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="2289.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island7" fitHeight="166.0" fitWidth="200.0" layoutX="2289.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="1680.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island5" fitHeight="79.0" fitWidth="200.0" layoutX="1680.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="141.0" fitWidth="185.0" layoutX="2014.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island6" fitHeight="141.0" fitWidth="185.0" layoutX="2014.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands5.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="143.0" fitWidth="341.0" layoutX="2731.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island9" fitHeight="143.0" fitWidth="341.0" layoutX="2731.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands6.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="127.0" fitWidth="175.0" layoutX="3736.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island13" fitHeight="127.0" fitWidth="175.0" layoutX="3736.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands8.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="134.0" fitWidth="185.0" layoutX="3325.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island11" fitHeight="134.0" fitWidth="185.0" layoutX="3325.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands7.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="106.0" fitWidth="114.0" layoutX="2564.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island8" fitHeight="106.0" fitWidth="114.0" layoutX="2564.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands9.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="102.0" fitWidth="132.0" layoutX="3560.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island12" fitHeight="102.0" fitWidth="132.0" layoutX="3560.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands10.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="102.0" fitWidth="267.0" layoutX="3047.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island10" fitHeight="102.0" fitWidth="267.0" layoutX="3047.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="174.0" fitWidth="237.0" layoutX="3972.0" layoutY="442.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Island14" fitHeight="174.0" fitWidth="237.0" layoutX="3972.0" layoutY="442.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Islands/Islands3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="127.0" fitWidth="84.0" layoutX="737.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Tree%20b.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="57.0" layoutX="66.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Tree%20b.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="84.0" layoutX="959.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Tree%20c.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="84.0" layoutX="261.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Tree%20c.png" />
          </image>
       </ImageView>
    </children>

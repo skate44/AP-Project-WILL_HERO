@@ -25,28 +25,61 @@ import java.util.ResourceBundle;
 public class ControllerGamePlay implements Initializable {
 
     @FXML
-    private AnchorPane PlayAnchorPane;
-
-    @FXML
     private Text CurrentScore;
 
     @FXML
-    private ImageView firstOrc;
+    private ImageView Island1;
 
     @FXML
-    private ImageView HboxIsland;
+    private ImageView Island2;
+
+    @FXML
+    private ImageView Island3;
+
+    @FXML
+    private ImageView Island4;
+
+    @FXML
+    private ImageView Island5;
+
+    @FXML
+    private ImageView Island6;
+
+    @FXML
+    private ImageView Island7;
+
+    @FXML
+    private ImageView Island8;
+
+    @FXML
+    private ImageView Island9;
+
+    @FXML
+    private ImageView Island10;
+
+    @FXML
+    private ImageView Island11;
+
+    @FXML
+    private ImageView Island12;
+
+    @FXML
+    private ImageView Island13;
+
+    @FXML
+    private ImageView Island14;
+
+    @FXML
+    private AnchorPane PlayAnchorPane;
+
+    @FXML
+    private ImageView firstOrc;
 
     @FXML
     private ImageView helmet;
 
     @FXML
     private ImageView topIsland;
-
-    @FXML
-    private ImageView ImageIsland1;
-
-    @FXML
-    private ImageView ImageIsland2;
 
     int initialScore =0;
 
@@ -70,13 +103,8 @@ public class ControllerGamePlay implements Initializable {
             timeline.play();
             // Timeline Section Ends Here
             System.out.println("A Pressed !!");
-            //IslandAnimation();
+            IslandAnimation();
             h.move(helmet);
-            // To move the Islands around
-            i.move(topIsland);
-            //i.move(ImageIsland1);
-            //i.move(ImageIsland2);
-            //i.move(HboxIsland);
         }
     }
     public void death(ImageView helmet, ImageView firstOrc){
@@ -89,7 +117,6 @@ public class ControllerGamePlay implements Initializable {
 
          */
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -110,27 +137,119 @@ public class ControllerGamePlay implements Initializable {
 
     public void IslandAnimation(){
 
+        TranslateTransition island0 = new TranslateTransition();
+        island0.setNode(topIsland);
+        island0.setAutoReverse(false);
+        island0.setDuration(Duration.millis(500));
+        island0.setByX(-100);
+        island0.setCycleCount(1);
+        island0.play();
+
         TranslateTransition island1 = new TranslateTransition();
-        island1.setNode(ImageIsland1);
+        island1.setNode(Island1);
         island1.setAutoReverse(false);
         island1.setDuration(Duration.millis(500));
-        island1.setByX(-200);
+        island1.setByX(-100);
         island1.setCycleCount(1);
         island1.play();
 
         TranslateTransition island2 = new TranslateTransition();
-        island2.setNode(ImageIsland2);
+        island2.setNode(Island2);
         island2.setAutoReverse(false);
         island2.setDuration(Duration.millis(500));
-        island2.setByX(-200);
+        island2.setByX(-100);
         island2.setCycleCount(1);
         island2.play();
 
+        TranslateTransition island3 = new TranslateTransition();
+        island3.setNode(Island3);
+        island3.setAutoReverse(false);
+        island3.setDuration(Duration.millis(500));
+        island3.setByX(-100);
+        island3.setCycleCount(1);
+        island3.play();
+
+        TranslateTransition orc = new TranslateTransition();
+        orc.setNode(firstOrc);
+        orc.setAutoReverse(false);
+        orc.setDuration(Duration.millis(500));
+        orc.setByX(-100);
+        orc.setCycleCount(1);
+        orc.play();
+
+        TranslateTransition island4 = new TranslateTransition();
+        island4.setNode(Island4);
+        island4.setAutoReverse(false);
+        island4.setDuration(Duration.millis(500));
+        island4.setByX(-100);
+        island4.setCycleCount(1);
+        island4.play();
+
+        TranslateTransition island5 = new TranslateTransition();
+        island5.setNode(Island5);
+        island5.setAutoReverse(false);
+        island5.setDuration(Duration.millis(500));
+        island5.setByX(-100);
+        island5.setCycleCount(1);
+        island5.play();
+
+        TranslateTransition island6 = new TranslateTransition();
+        island6.setNode(Island6);
+        island6.setAutoReverse(false);
+        island6.setDuration(Duration.millis(500));
+        island6.setByX(-100);
+        island6.setCycleCount(1);
+        island6.play();
+
+        TranslateTransition island7 = new TranslateTransition();
+        island7.setNode(Island7);
+        island7.setAutoReverse(false);
+        island7.setDuration(Duration.millis(500));
+        island7.setByX(-100);
+        island7.setCycleCount(1);
+        island7.play();
+
+        TranslateTransition island8 = new TranslateTransition();
+        island8.setNode(Island8);
+        island8.setAutoReverse(false);
+        island8.setDuration(Duration.millis(500));
+        island8.setByX(-100);
+        island8.setCycleCount(1);
+        island8.play();
+
+        TranslateTransition island9 = new TranslateTransition();
+        island9.setNode(Island9);
+        island9.setAutoReverse(false);
+        island9.setDuration(Duration.millis(500));
+        island9.setByX(-100);
+        island9.setCycleCount(1);
+        island9.play();
+
+        TranslateTransition island10 = new TranslateTransition();
+        island10.setNode(Island10);
+        island10.setAutoReverse(false);
+        island10.setDuration(Duration.millis(500));
+        island10.setByX(-100);
+        island10.setCycleCount(1);
+        island10.play();
+
+        TranslateTransition island11 = new TranslateTransition();
+        island11.setNode(Island11);
+        island11.setAutoReverse(false);
+        island11.setDuration(Duration.millis(500));
+        island11.setByX(-100);
+        island11.setCycleCount(1);
+        island11.play();
+
+        TranslateTransition island12 = new TranslateTransition();
+        island12.setNode(Island12);
+        island12.setAutoReverse(false);
+        island12.setDuration(Duration.millis(500));
+        island12.setByX(-100);
+        island12.setCycleCount(1);
+        island12.play();
+
     }
-
-
-
-
 
 
 }

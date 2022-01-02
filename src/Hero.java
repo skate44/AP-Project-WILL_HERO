@@ -37,7 +37,7 @@ public class Hero {
     public void move(ImageView img){
             System.out.println("Moving Helmet");
             img.setX(currentPosition);
-            currentPosition+=100;
+            currentPosition+=2;
     }
 
     public void die(){}
