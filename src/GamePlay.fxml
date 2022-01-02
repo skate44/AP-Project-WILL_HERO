@@ -165,5 +165,19 @@
             <Image url="@Image/Tree3.png" />
          </image>
       </ImageView>
+      <VBox alignment="CENTER" layoutX="1228.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="79.0" prefWidth="57.0">
+         <children>
+            <Text fx:id="CurrentCoinScore" fill="#fff902" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Times New Roman" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <ImageView fx:id="CoinLogo" fitHeight="60.0" fitWidth="65.0" layoutX="1165.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Coin.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

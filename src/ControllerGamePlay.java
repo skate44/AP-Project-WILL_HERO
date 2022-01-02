@@ -28,6 +28,12 @@ public class ControllerGamePlay implements Initializable {
     private Text CurrentScore;
 
     @FXML
+    private ImageView CoinLogo;
+
+    @FXML
+    private Text CurrentCoinScore;
+
+    @FXML
     private ImageView Tree1;
 
     @FXML
@@ -118,6 +124,8 @@ public class ControllerGamePlay implements Initializable {
 
     Hero h = new Hero(324);
     Islands i = new Islands(324);
+    GreenOrc go = new GreenOrc(324);
+    RedOrc ro = new RedOrc(324);
 
     @FXML
     void PauseGame(ActionEvent event) throws IOException {
@@ -153,8 +161,9 @@ public class ControllerGamePlay implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Jumping
         h.jump(helmet);
-        h.jump(firstOrc);
+        go.jump(firstOrc);
 
         // Translate Section
 
@@ -169,6 +178,16 @@ public class ControllerGamePlay implements Initializable {
     }
 
     public void Animation(){
+
+        /*
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(CoinLogo);
+        rotate.setDuration(Duration.millis(1000));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.play();
+         */
 
         TranslateTransition tree1 = new TranslateTransition();
         tree1.setNode(Tree1);
