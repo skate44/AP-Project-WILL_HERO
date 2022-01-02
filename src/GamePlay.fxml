@@ -184,11 +184,6 @@
             <Image url="@Image/redorch.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="2668.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/TNT.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="gOrc2" fitHeight="50.0" fitWidth="50.0" layoutX="2964.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/green orc.png" />
@@ -352,6 +347,16 @@
       <ImageView fx:id="ClosedChest" fitHeight="60.0" fitWidth="76.0" layoutX="1370.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Chest.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="2665.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/TNT.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="OpenChest" fitHeight="60.0" fitWidth="76.0" layoutX="1371.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/OpenedChest.png" />
          </image>
       </ImageView>
    </children>

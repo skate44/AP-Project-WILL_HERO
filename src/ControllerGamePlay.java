@@ -17,6 +17,7 @@ import javafx.animation.TranslateTransition;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -138,6 +139,9 @@ public class ControllerGamePlay implements Initializable{
     private ImageView ClosedChest;
 
     @FXML
+    private ImageView OpenChest;
+
+    @FXML
     private ImageView coin1;
 
     @FXML
@@ -215,15 +219,21 @@ public class ControllerGamePlay implements Initializable{
          */
     }
 
-    public void ChestCollision(ImageView helmet, ImageView img){
+    public void ChestCollision(ImageView helmet, ImageView img,ImageView img1){
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             System.out.println("Chest Collision");
 
-            Image img1 = new Image(getClass().getResourceAsStream("OpenedChest.png"));
-            img.setImage(img1);
+            FadeTransition fadeout = new FadeTransition(Duration.millis(1),img);
+            fadeout.setFromValue(1);
+            fadeout.setToValue(0);
+            fadeout.play();
 
-
-
+        }
+        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
+            FadeTransition fadein = new FadeTransition(Duration.millis(1),img1);
+            fadein.setFromValue(0);
+            fadein.setToValue(1);
+            fadein.play();
         }
 
     }
@@ -267,7 +277,7 @@ public class ControllerGamePlay implements Initializable{
                 OrcCollision(helmet, rOrc1);
                 OrcCollision(helmet, rOrc2);
                 OrcCollision(helmet, rOrc3);
-                ChestCollision(helmet,ClosedChest);
+                ChestCollision(helmet,ClosedChest,OpenChest);
 
                 CoinCollision(helmet, coin1);
                 CoinCollision(helmet, coin2);
