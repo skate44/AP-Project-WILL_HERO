@@ -10,6 +10,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import javafx.animation.AnimationTimer;
@@ -183,13 +184,17 @@ public class ControllerGamePlay implements Initializable{
     @FXML
     private ImageView topIsland;
 
+    @FXML
+    private ImageView tnt;
+
     int initialScore = 0;
     int initialCoin = 0;
 
     Hero h = new Hero(324);
-    Islands i = new Islands(324);
+    Islands i1 = new Islands(324);
     GreenOrc go = new GreenOrc(324);
     RedOrc ro = new RedOrc(324);
+    TNT t = new TNT();
 
     @FXML
     void PauseGame(ActionEvent event) throws IOException {
@@ -208,26 +213,42 @@ public class ControllerGamePlay implements Initializable{
         }
     }
 
-    public void OrcCollision(ImageView helmet, ImageView img){
+    public void OrcCollision(ImageView helmet, ImageView img) throws IOException {
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             System.out.println("Orc Collision");
+            AnchorPane pane1 = FXMLLoader.load(getClass().getResource("GameOver.fxml"));
+            PlayAnchorPane.getChildren().setAll(pane1);
         }
     }
 
     public void ChestCollision(ImageView helmet, ImageView img,ImageView img1){
-        Image imageObject;
-        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
-            System.out.println("Chest Collision");
+            if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
+                System.out.println("Chest Collision");
+                FadeTransition fadeout = new FadeTransition(Duration.millis(1), img);
+                fadeout.setFromValue(1);
+                fadeout.setToValue(0);
+                fadeout.play();
 
-            FadeTransition fadeout = new FadeTransition(Duration.millis(1), img);
+                FadeTransition fadein = new FadeTransition(Duration.millis(1), img1);
+                fadein.setFromValue(0);
+                fadein.setToValue(1);
+                fadein.play();
+
+
+
+            }
+
+    }
+
+    public void TntCollision(ImageView helmet, ImageView img){
+        if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
+            FadeTransition fadeout = new FadeTransition(Duration.millis(1),img);
             fadeout.setFromValue(1);
             fadeout.setToValue(0);
             fadeout.play();
 
-            FadeTransition fadein = new FadeTransition(Duration.millis(1), img1);
-            fadein.setFromValue(0);
-            fadein.setToValue(1);
-            fadein.play();
+            System.out.println("TNT Collision");
+
 
         }
     }
@@ -258,21 +279,29 @@ public class ControllerGamePlay implements Initializable{
         ro.jump(rOrc3);
 
 
+
         // Translate Section
 
         AnimationTimer collisionTimer = new AnimationTimer() {
             boolean bool = false;
             @Override
             public void handle(long timestamp) {
-                OrcCollision(helmet, firstOrc);
-                OrcCollision(helmet, gOrc1);
-                OrcCollision(helmet, gOrc2);
-                OrcCollision(helmet, gOrc3);
-                OrcCollision(helmet, rOrc1);
-                OrcCollision(helmet, rOrc2);
-                OrcCollision(helmet, rOrc3);
-                ChestCollision(helmet,ClosedChest,OpenChest);
-                //ChestCollisionAfter(helmet,OpenChest);
+                try {
+                    OrcCollision(helmet, firstOrc);
+                    OrcCollision(helmet, gOrc1);
+                    OrcCollision(helmet, gOrc2);
+                    OrcCollision(helmet, gOrc3);
+                    OrcCollision(helmet, rOrc1);
+                    OrcCollision(helmet, rOrc2);
+                    OrcCollision(helmet, rOrc3);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                ChestCollision(helmet, ClosedChest, OpenChest);
+
+                TntCollision(helmet,tnt);
+
 
                 CoinCollision(helmet, coin1);
                 CoinCollision(helmet, coin2);
@@ -282,6 +311,7 @@ public class ControllerGamePlay implements Initializable{
                 CoinCollision(helmet, coin6);
                 CoinCollision(helmet, coin7);
                 CoinCollision(helmet, coin8);
+                CoinCollision(helmet, coin9);
 
                 /*
                 if(bool){
@@ -578,6 +608,14 @@ public class ControllerGamePlay implements Initializable{
         Coin10.setByX(-100);
         Coin10.setCycleCount(1);
         Coin10.play();
+
+        TranslateTransition Tnt = new TranslateTransition();
+        Tnt.setNode(tnt);
+        Tnt.setAutoReverse(false);
+        Tnt.setDuration(Duration.millis(500));
+        Tnt.setByX(-100);
+        Tnt.setCycleCount(1);
+        Tnt.play();
 
         TranslateTransition island4 = new TranslateTransition();
         island4.setNode(Island4);

@@ -349,14 +349,14 @@
             <Image url="@Image/Chest.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="2665.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/TNT.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="OpenChest" disable="true" fitHeight="60.0" fitWidth="76.0" layoutX="1300.0" layoutY="396.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/OpenedChest.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tnt" fitHeight="35.0" fitWidth="38.0" layoutX="2654.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/TNT.png" />
          </image>
       </ImageView>
    </children>

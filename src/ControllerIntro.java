@@ -70,7 +70,7 @@ public class ControllerIntro implements Initializable {
         }
     }
 
-    public void exit(Stage stage) {
+    public static void exit(Stage stage) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("EXIT");
         alert.setHeaderText("Do you want to Exit!");
