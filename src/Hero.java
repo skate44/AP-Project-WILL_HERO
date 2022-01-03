@@ -16,7 +16,7 @@ public class Hero {
 
     private int currentHelmet;
     private int currentPosition;
-    private float jumpLength=-150;
+    private float jumpLength=-200;
     //private boolean aliveOrDead();
     public Group grp;
 
@@ -36,9 +36,9 @@ public class Hero {
     }
 
     public void move(ImageView img){
-            System.out.println("Moving Helmet");
-            img.setX(currentPosition);
-            currentPosition+=2;
+        System.out.println("Moving Helmet");
+        img.setX(currentPosition);
+        currentPosition+=2;
     }
 
     public void die(){}

@@ -1,4 +1,5 @@
 import javafx.animation.*;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,6 +31,9 @@ public class ControllerGamePlay implements Initializable{
 
     @FXML
     private Text CurrentCoinScore;
+
+    @FXML
+    private ImageView MainBoss;
 
     @FXML
     private ImageView gOrc1;
@@ -135,12 +139,27 @@ public class ControllerGamePlay implements Initializable{
 
     @FXML
     private ImageView Island18;
+    
+    @FXML
+    private ImageView Island19;
+
+    @FXML
+    private ImageView Island20;
+
+    @FXML
+    private ImageView Island21;
 
     @FXML
     private ImageView ClosedChest;
 
     @FXML
     private ImageView OpenChest;
+
+    @FXML
+    private ImageView ClosedChest1;
+
+    @FXML
+    private ImageView OpenChest1;
 
     @FXML
     private ImageView coin1;
@@ -218,6 +237,7 @@ public class ControllerGamePlay implements Initializable{
             System.out.println("Orc Collision");
             AnchorPane pane1 = FXMLLoader.load(getClass().getResource("GameOver.fxml"));
             PlayAnchorPane.getChildren().setAll(pane1);
+
         }
     }
 
@@ -240,7 +260,7 @@ public class ControllerGamePlay implements Initializable{
 
     }
 
-    public void TntCollision(ImageView helmet, ImageView img){
+    public void TntCollision(ImageView helmet, ImageView img) throws IOException {
         if (helmet.getBoundsInParent().intersects(img.getBoundsInParent())) {
             FadeTransition fadeout = new FadeTransition(Duration.millis(1),img);
             fadeout.setFromValue(1);
@@ -248,7 +268,8 @@ public class ControllerGamePlay implements Initializable{
             fadeout.play();
 
             System.out.println("TNT Collision");
-
+            AnchorPane pane1 = FXMLLoader.load(getClass().getResource("GameOver.fxml"));
+            PlayAnchorPane.getChildren().setAll(pane1);
 
         }
     }
@@ -277,6 +298,7 @@ public class ControllerGamePlay implements Initializable{
         ro.jump(rOrc1);
         ro.jump(rOrc2);
         ro.jump(rOrc3);
+        go.bossJump(MainBoss);
 
 
 
@@ -286,6 +308,7 @@ public class ControllerGamePlay implements Initializable{
             boolean bool = false;
             @Override
             public void handle(long timestamp) {
+                /*
                 try {
                     OrcCollision(helmet, firstOrc);
                     OrcCollision(helmet, gOrc1);
@@ -294,14 +317,15 @@ public class ControllerGamePlay implements Initializable{
                     OrcCollision(helmet, rOrc1);
                     OrcCollision(helmet, rOrc2);
                     OrcCollision(helmet, rOrc3);
+                    TntCollision(helmet,tnt);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
+                 */
+
                 ChestCollision(helmet, ClosedChest, OpenChest);
-
-                TntCollision(helmet,tnt);
-
+                ChestCollision(helmet, ClosedChest1, OpenChest1);
 
                 CoinCollision(helmet, coin1);
                 CoinCollision(helmet, coin2);
@@ -737,6 +761,30 @@ public class ControllerGamePlay implements Initializable{
         island18.setCycleCount(1);
         island18.play();
 
+        TranslateTransition island19 = new TranslateTransition();
+        island19.setNode(Island19);
+        island19.setAutoReverse(false);
+        island19.setDuration(Duration.millis(500));
+        island19.setByX(-100);
+        island19.setCycleCount(1);
+        island19.play();
+
+        TranslateTransition island20 = new TranslateTransition();
+        island20.setNode(Island20);
+        island20.setAutoReverse(false);
+        island20.setDuration(Duration.millis(500));
+        island20.setByX(-100);
+        island20.setCycleCount(1);
+        island20.play();
+
+        TranslateTransition island21 = new TranslateTransition();
+        island21.setNode(Island21);
+        island21.setAutoReverse(false);
+        island21.setDuration(Duration.millis(500));
+        island21.setByX(-100);
+        island21.setCycleCount(1);
+        island21.play();
+
         TranslateTransition chest = new TranslateTransition();
         chest.setNode(ClosedChest);
         chest.setAutoReverse(false);
@@ -752,6 +800,22 @@ public class ControllerGamePlay implements Initializable{
         chestOpen.setByX(-100);
         chestOpen.setCycleCount(1);
         chestOpen.play();
+
+        TranslateTransition chest1 = new TranslateTransition();
+        chest1.setNode(ClosedChest1);
+        chest1.setAutoReverse(false);
+        chest1.setDuration(Duration.millis(500));
+        chest1.setByX(-100);
+        chest1.setCycleCount(1);
+        chest1.play();
+
+        TranslateTransition chestOpen1 = new TranslateTransition();
+        chestOpen1.setNode(OpenChest1);
+        chestOpen1.setAutoReverse(false);
+        chestOpen1.setDuration(Duration.millis(500));
+        chestOpen1.setByX(-100);
+        chestOpen1.setCycleCount(1);
+        chestOpen1.play();
 
     }
 

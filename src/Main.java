@@ -7,8 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
+import java.nio.file.Paths;
 
 
 public class Main extends Application {
@@ -27,6 +30,12 @@ public class Main extends Application {
         primarystage.setY(0);
         Scene scene = new Scene(root);
         primarystage.setScene(scene);
+        primarystage.show();
+
+        String file = "Background.mp3";
+        Media media = new Media(Paths.get(file).toUri().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
         primarystage.show();
 
         /*

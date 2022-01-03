@@ -8,7 +8,7 @@ public class RedOrc {
 
     private int currentHelmet;
     private int currentPosition;
-    private float jumpLength=-100;
+    private float jumpLength=-50;
     //private boolean aliveOrDead();
     public Group grp;
 

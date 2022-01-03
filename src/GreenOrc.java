@@ -15,7 +15,7 @@ public class GreenOrc {
 
     private int currentHelmet;
     private int currentPosition;
-    private float jumpLength=-100;
+    private float jumpLength=-50;
     //private boolean aliveOrDead();
     public Group grp;
 
@@ -34,13 +34,18 @@ public class GreenOrc {
         translate.play();
     }
 
-    /*
-    public void move(ImageView img){
-        System.out.println("Moving Helmet");
-        img.setX(currentPosition);
-        currentPosition+=2;
+    public void bossJump(ImageView img){
+        float jumpLength=-20;
+        TranslateTransition translate = new TranslateTransition();
+        translate.setNode(img);
+        translate.setDuration(Duration.millis(200));
+        translate.setCycleCount(TranslateTransition.INDEFINITE);
+        translate.setInterpolator(Interpolator.LINEAR);
+        translate.setByY(jumpLength);
+        translate.setAutoReverse(true);
+        translate.play();
     }
-     */
+
 
     public void die(){}
 
