@@ -35,7 +35,7 @@ public class GreenOrc {
     }
 
     public void bossJump(ImageView img){
-        float jumpLength=-20;
+        float jumpLength=-50;
         TranslateTransition translate = new TranslateTransition();
         translate.setNode(img);
         translate.setDuration(Duration.millis(200));

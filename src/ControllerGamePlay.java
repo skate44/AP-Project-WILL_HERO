@@ -308,7 +308,7 @@ public class ControllerGamePlay implements Initializable{
             boolean bool = false;
             @Override
             public void handle(long timestamp) {
-                /*
+
                 try {
                     OrcCollision(helmet, firstOrc);
                     OrcCollision(helmet, gOrc1);
@@ -318,11 +318,12 @@ public class ControllerGamePlay implements Initializable{
                     OrcCollision(helmet, rOrc2);
                     OrcCollision(helmet, rOrc3);
                     TntCollision(helmet,tnt);
+                    OrcCollision(helmet,MainBoss);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
-                 */
+
 
                 ChestCollision(helmet, ClosedChest, OpenChest);
                 ChestCollision(helmet, ClosedChest1, OpenChest1);
@@ -552,6 +553,14 @@ public class ControllerGamePlay implements Initializable{
         orc6.setByX(-100);
         orc6.setCycleCount(1);
         orc6.play();
+
+        TranslateTransition bossorc = new TranslateTransition();
+        bossorc.setNode(MainBoss);
+        bossorc.setAutoReverse(false);
+        bossorc.setDuration(Duration.millis(500));
+        bossorc.setByX(-100);
+        bossorc.setCycleCount(1);
+        bossorc.play();
 
         TranslateTransition Coin1 = new TranslateTransition();
         Coin1.setNode(coin1);
